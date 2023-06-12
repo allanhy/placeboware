@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Placeboware-TestingOut",
+  "x-vendia-acls": {
+    "patientACL": {
+      "type": "Patient"
+    },
+    "drugACL": {
+      "type": "Drug"
+    },
+    "fdaACL": {
+      "type": "Patient",
+      "permissions": [
+        {
+          "principal": {
+            "nodes": [
+              "fda"
+            ]
+          },
+          "operations": [
+            "READ"
+          ]
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "Patient": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "patientPicture": {
+            "type": "string"
+          },
+          "dob": {
+            "type": "string"
+          },
+          "insuranceNumber": {
+            "type": "string"
+          },
+          "height": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "string"
+          },
+          "bloodPressure": {
+            "type": "string"
+          },
+          "bloodType": {
+            "type": "string"
+          },
+          "temperature": {
+            "type": "string"
+          },
+          "oxygenSaturation": {
+            "type": "string"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "currentMedications": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "medication": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "familyHistory": {
+            "type": "string"
+          },
+          "currentlyEmployed": {
+            "type": "string"
+          },
+          "currentlyInsured": {
+            "type": "string"
+          },
+          "icdHealthCodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "allergies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "allergy": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "visits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "patient": {
+                  "type": "string"
+                },
+                "dateTime": {
+                  "type": "string"
+                },
+                "notes": {
+                  "type": "string"
+                },
+                "hivViralLoad": {
+                  "type": "string"
+                },
+                "currentDose": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "completedDoses": {
+            "type": "string"
+          },
+          "eligible": {
+            "type": "string"
+          },
+          "currentDrug": {
+            "type": "string"
+          },
+          "placebo": {
+            "type": "boolean"
+          },
+          "drugIDs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "patientDrugIDs": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "drugName": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Drug": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "dateOrdered": {
+            "type": "string"
+          },
+          "totalVials": {
+            "type": "string"
+          },
+          "dateCompleted": {
+            "type": "string"
+          },
+          "placebo": {
+            "type": "boolean"
+          },
+          "batchNumber": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "trialPatients": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "allergy": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "drugIDs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ids": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "released": {
+            "type": "boolean"
+          },
+          "success": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  }
+}
