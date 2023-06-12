@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/placeboware/static/css/main.73582947.css",
+    "main.js": "/placeboware/static/js/main.bdde5300.js",
+    "static/js/787.33f6d805.chunk.js": "/placeboware/static/js/787.33f6d805.chunk.js",
+    "index.html": "/placeboware/index.html",
+    "main.73582947.css.map": "/placeboware/static/css/main.73582947.css.map",
+    "main.bdde5300.js.map": "/placeboware/static/js/main.bdde5300.js.map",
+    "787.33f6d805.chunk.js.map": "/placeboware/static/js/787.33f6d805.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.73582947.css",
+    "static/js/main.bdde5300.js"
+  ]
+}
