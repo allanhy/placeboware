@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# Placeboware Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Create a functional application that sends data in near real-time with 3 different personas keeping the information secure and reliable.
 
-## Available Scripts
+# Background
 
-In the project directory, you can run:
+In the United States, the Federal Drug Administration (FDA) approves medications for specific use cases, if the medication is both effective and safe. To prove the safety and effectiveness of a new drug, pharmaceutical companies conduct multi-phase clinical trials in collaboration with healthcare providers and under the oversight of the FDA. For a successful study, all three parties need to exchange data in a controlled and auditable manner. For example, a healthcare provider needs to be able to identify their patient and track treatment. Still, they should not know whether the patient is part of the treatment group (receiving the actual medication) or the control group (receiving a placebo or established medication). On the other hand, the FDA and pharma companies need this information but generally do not need to know a patient's personally identifiable information (PII), such as their name, date of birth, or address. In the interest of patient privacy, PII should be redacted before it is transmitted by a healthcare provider. At the same time, it is important that the FDA can verify the integrity of study data. The technical means used to transfer data should make it impossible to - for example - remove a study participant or manipulate laboratory data to improve the chances of approval for a new medication. While we generally believe in the moral integrity of humans, this is a real risk given the cost of developing a new drug (~$1B). Especially when the drug maker has to show that the medication is more effective than existing alternatives.
 
-### `npm start`
+# The Goal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The goal of this project was to build a proof of concept distributed information system with suitable user interfaces that could be used by the FDA, pharmaceutical companies, and participating healthcare providers to exchange study data as it is produced (i.e., in near real-time) in a secure, trusted (i.e., auditable), and controlled (i.e., minimally permissive) manner. We built our information system on top of the Vendia Share platform, which supports data exchange through an immutable, cryptographically verifiable, distributed ledger and provides the primitives to control data flow (e.g., redaction). 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Technical Stack
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Front End - React 
+Back End - Vendia Client SDK utilizes an entirely serverless architecture
+Authentication & Authorization - Firebase
