@@ -13,5 +13,7 @@ The goal of this project was to build a proof of concept distributed information
 # Technical Stack
 
 Front End - React 
+
 Back End - Vendia Client SDK utilizes an entirely serverless architecture
+
 Authentication & Authorization - Firebase
